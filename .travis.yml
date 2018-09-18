@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t nongod/react-test -f ./client/Dockerfile.dev ./client
+  - docker build -t nongod/react-test -f Dockerfile.dev ./client
 
 script:
   - docker run nongod/react-test npm test -- --coverage
